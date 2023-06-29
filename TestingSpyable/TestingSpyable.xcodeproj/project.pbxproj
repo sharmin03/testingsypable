@@ -16,6 +16,7 @@
 		7D5C9F5C2A4DA73400225EF9 /* TestingSpyableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5C9F5B2A4DA73400225EF9 /* TestingSpyableTests.swift */; };
 		7D5C9F662A4DA73400225EF9 /* TestingSpyableUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5C9F652A4DA73400225EF9 /* TestingSpyableUITests.swift */; };
 		7D5C9F682A4DA73400225EF9 /* TestingSpyableUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5C9F672A4DA73400225EF9 /* TestingSpyableUITestsLaunchTests.swift */; };
+		7D5C9F762A4DA83300225EF9 /* Spyable in Frameworks */ = {isa = PBXBuildFile; productRef = 7D5C9F752A4DA83300225EF9 /* Spyable */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D5C9F762A4DA83300225EF9 /* Spyable in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,6 +145,9 @@
 			dependencies = (
 			);
 			name = TestingSpyable;
+			packageProductDependencies = (
+				7D5C9F752A4DA83300225EF9 /* Spyable */,
+			);
 			productName = TestingSpyable;
 			productReference = 7D5C9F412A4DA73300225EF9 /* TestingSpyable.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +220,9 @@
 				Base,
 			);
 			mainGroup = 7D5C9F382A4DA73300225EF9;
+			packageReferences = (
+				7D5C9F742A4DA83300225EF9 /* XCRemoteSwiftPackageReference "swift-spyable" */,
+			);
 			productRefGroup = 7D5C9F422A4DA73300225EF9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -607,6 +615,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7D5C9F742A4DA83300225EF9 /* XCRemoteSwiftPackageReference "swift-spyable" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Matejkob/swift-spyable";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7D5C9F752A4DA83300225EF9 /* Spyable */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7D5C9F742A4DA83300225EF9 /* XCRemoteSwiftPackageReference "swift-spyable" */;
+			productName = Spyable;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7D5C9F392A4DA73300225EF9 /* Project object */;
 }
