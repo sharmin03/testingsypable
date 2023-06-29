@@ -1,5 +1,5 @@
 import XCTest
-@testable import Examples
+@testable import TestingSpyable
 
 final class ViewModelTests: XCTestCase {
     var serviceSpy: ServiceProtocolSpy!
