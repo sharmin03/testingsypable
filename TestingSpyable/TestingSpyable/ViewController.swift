@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Spyable
 
 class ViewController: UIViewController {
 
