@@ -19,6 +19,7 @@
 		7D5C9F662A4DA73400225EF9 /* TestingSpyableUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5C9F652A4DA73400225EF9 /* TestingSpyableUITests.swift */; };
 		7D5C9F682A4DA73400225EF9 /* TestingSpyableUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5C9F672A4DA73400225EF9 /* TestingSpyableUITestsLaunchTests.swift */; };
 		7D5C9F762A4DA83300225EF9 /* Spyable in Frameworks */ = {isa = PBXBuildFile; productRef = 7D5C9F752A4DA83300225EF9 /* Spyable */; };
+		7DC15DCC2A4DB4BB00015F03 /* swift-mockable in Frameworks */ = {isa = PBXBuildFile; productRef = 7DC15DCB2A4DB4BB00015F03 /* swift-mockable */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		7D5C9F612A4DA73400225EF9 /* TestingSpyableUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestingSpyableUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D5C9F652A4DA73400225EF9 /* TestingSpyableUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingSpyableUITests.swift; sourceTree = "<group>"; };
 		7D5C9F672A4DA73400225EF9 /* TestingSpyableUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingSpyableUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		7DC15DC92A4DB49C00015F03 /* swift-mockable */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "swift-mockable"; path = "../../swift-mockable"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DC15DCC2A4DB4BB00015F03 /* swift-mockable in Frameworks */,
 				7D5C9F762A4DA83300225EF9 /* Spyable in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -88,7 +91,9 @@
 				7D5C9F432A4DA73300225EF9 /* TestingSpyable */,
 				7D5C9F5A2A4DA73400225EF9 /* TestingSpyableTests */,
 				7D5C9F642A4DA73400225EF9 /* TestingSpyableUITests */,
+				7DC15DC82A4DB48200015F03 /* Packages */,
 				7D5C9F422A4DA73300225EF9 /* Products */,
+				7DC15DCA2A4DB4BB00015F03 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -135,6 +140,21 @@
 			path = TestingSpyableUITests;
 			sourceTree = "<group>";
 		};
+		7DC15DC82A4DB48200015F03 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				7DC15DC92A4DB49C00015F03 /* swift-mockable */,
+			);
+			path = Packages;
+			sourceTree = "<group>";
+		};
+		7DC15DCA2A4DB4BB00015F03 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -153,6 +173,7 @@
 			name = TestingSpyable;
 			packageProductDependencies = (
 				7D5C9F752A4DA83300225EF9 /* Spyable */,
+				7DC15DCB2A4DB4BB00015F03 /* swift-mockable */,
 			);
 			productName = TestingSpyable;
 			productReference = 7D5C9F412A4DA73300225EF9 /* TestingSpyable.app */;
@@ -640,6 +661,10 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 7D5C9F742A4DA83300225EF9 /* XCRemoteSwiftPackageReference "swift-spyable" */;
 			productName = Spyable;
+		};
+		7DC15DCB2A4DB4BB00015F03 /* swift-mockable */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = "swift-mockable";
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
