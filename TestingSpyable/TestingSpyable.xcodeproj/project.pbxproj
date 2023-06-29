@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D3639782A4DB79400D05A4B /* Mockable in Frameworks */ = {isa = PBXBuildFile; productRef = 7D3639772A4DB79400D05A4B /* Mockable */; };
 		7D476FA62A4DAA8A00DD0E8A /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D476FA52A4DAA8A00DD0E8A /* ViewModel.swift */; };
 		7D476FA82A4DAAB500DD0E8A /* ViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D476FA72A4DAAB500DD0E8A /* ViewModelTests.swift */; };
 		7D5C9F452A4DA73300225EF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5C9F442A4DA73300225EF9 /* AppDelegate.swift */; };
@@ -19,7 +20,6 @@
 		7D5C9F662A4DA73400225EF9 /* TestingSpyableUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5C9F652A4DA73400225EF9 /* TestingSpyableUITests.swift */; };
 		7D5C9F682A4DA73400225EF9 /* TestingSpyableUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5C9F672A4DA73400225EF9 /* TestingSpyableUITestsLaunchTests.swift */; };
 		7D5C9F762A4DA83300225EF9 /* Spyable in Frameworks */ = {isa = PBXBuildFile; productRef = 7D5C9F752A4DA83300225EF9 /* Spyable */; };
-		7DC15DCC2A4DB4BB00015F03 /* swift-mockable in Frameworks */ = {isa = PBXBuildFile; productRef = 7DC15DCB2A4DB4BB00015F03 /* swift-mockable */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,7 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7DC15DCC2A4DB4BB00015F03 /* swift-mockable in Frameworks */,
+				7D3639782A4DB79400D05A4B /* Mockable in Frameworks */,
 				7D5C9F762A4DA83300225EF9 /* Spyable in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -173,7 +173,7 @@
 			name = TestingSpyable;
 			packageProductDependencies = (
 				7D5C9F752A4DA83300225EF9 /* Spyable */,
-				7DC15DCB2A4DB4BB00015F03 /* swift-mockable */,
+				7D3639772A4DB79400D05A4B /* Mockable */,
 			);
 			productName = TestingSpyable;
 			productReference = 7D5C9F412A4DA73300225EF9 /* TestingSpyable.app */;
@@ -657,14 +657,14 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		7D3639772A4DB79400D05A4B /* Mockable */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Mockable;
+		};
 		7D5C9F752A4DA83300225EF9 /* Spyable */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 7D5C9F742A4DA83300225EF9 /* XCRemoteSwiftPackageReference "swift-spyable" */;
 			productName = Spyable;
-		};
-		7DC15DCB2A4DB4BB00015F03 /* swift-mockable */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = "swift-mockable";
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
