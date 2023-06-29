@@ -3,15 +3,15 @@ import SwiftSyntaxBuilder
 
 
 struct MockGenerator {
-    private let variablePrefixFactory = VariablePrefixFactory()
-    private let variablesImplementationFactory = VariablesImplementationFactory()
-    private let callsCountFactory = CallsCountFactory()
-    private let calledFactory = CalledFactory()
-    private let receivedArgumentsFactory = ReceivedArgumentsFactory()
-    private let receivedInvocationsFactory = ReceivedInvocationsFactory()
-    private let returnValueFactory = ReturnValueFactory()
-    private let closureFactory = ClosureFactory()
-    private let functionImplementationFactory = FunctionImplementationFactory()
+    private let variablePrefixGenerator = VariablePrefixGenerator()
+    private let variablesImplementationGenerator = VariablesImplementationGenerator()
+    private let callsCountGenerator = CallsCountGenerator()
+    private let calledGenerator = CalledGenerator()
+    private let receivedArgumentsGenerator = ReceivedArgumentsGenerator()
+    private let receivedInvocationsGenerator = ReceivedInvocationsGenerator()
+    private let returnValueGenerator = ReturnValueGenerator()
+    private let closureGenerator = ClosureGenerator()
+    private let functionImplementationGenerator = FunctionImplementationGenerator()
 
     func classDeclaration(for protocolDeclaration: ProtocolDeclSyntax) -> ClassDeclSyntax {
         let identifier =  TokenSyntax.identifier("Mock" + protocolDeclaration.identifier.text)
@@ -31,42 +31,42 @@ struct MockGenerator {
             },
             memberBlockBuilder: {
                 for variableDeclaration in variableDeclarations {
-                    variablesImplementationFactory.variablesDeclarations(
+                    variablesImplementationGenerator.variablesDeclarations(
                         protocolVariableDeclaration: variableDeclaration
                     )
                 }
 
                 for functionDeclaration in functionDeclarations {
-                    let variablePrefix = variablePrefixFactory.text(for: functionDeclaration)
+                    let variablePrefix = variablePrefixGenerator.text(for: functionDeclaration)
                     let parameterList = functionDeclaration.signature.input.parameterList
 
-                    callsCountFactory.variableDeclaration(variablePrefix: variablePrefix)
-                    calledFactory.variableDeclaration(variablePrefix: variablePrefix)
+                    callsCountGenerator.variableDeclaration(variablePrefix: variablePrefix)
+                    calledGenerator.variableDeclaration(variablePrefix: variablePrefix)
 
                     if !parameterList.isEmpty {
-                        receivedArgumentsFactory.variableDeclaration(
+                        receivedArgumentsGenerator.variableDeclaration(
                             variablePrefix: variablePrefix,
                             parameterList: parameterList
                         )
-                        receivedInvocationsFactory.variableDeclaration(
+                        receivedInvocationsGenerator.variableDeclaration(
                             variablePrefix: variablePrefix,
                             parameterList: parameterList
                         )
                     }
 
                     if let returnType = functionDeclaration.signature.output?.returnType {
-                        returnValueFactory.variableDeclaration(
+                        returnValueGenerator.variableDeclaration(
                             variablePrefix: variablePrefix,
                             functionReturnType: returnType
                         )
                     }
 
-                    closureFactory.variableDeclaration(
+                    closureGenerator.variableDeclaration(
                         variablePrefix: variablePrefix,
                         functionSignature: functionDeclaration.signature
                     )
 
-                    functionImplementationFactory.declaration(
+                    functionImplementationGenerator.declaration(
                         variablePrefix: variablePrefix,
                         protocolFunctionDeclaration: functionDeclaration
                     )
